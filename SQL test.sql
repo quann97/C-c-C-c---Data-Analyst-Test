@@ -36,7 +36,7 @@ ORDER BY Dates) d) d;
 -- 5) Write a query that returns each employee and for each row/employee include the greatest number of employees that worked for the company at any time during their tenure and the first date that maximum was reached. Extra points for not using cursors
 -- Step 1: caculate changes in headcount overtime by creating new column filled with '1' value for each hire date and '-1' value for each termination date, null values mean no changes, then put together all the dates and added values.
 -- Step 2: caculate a accumulative sum of the changes to get the total number of employees at any point in time.
--- Step 3: join the employee table with the caculated fields on the condition that the timepoint is between the hire date and the termination date (if not use current date) of a each employee
+-- Step 3: join the employee table with the caculated fields on the condition that the timepoint is between the hire date and the termination date (if not use current date) of each employee
 -- Step 4: ranking the rows group by each employee, order by the number of employees (descending) and timepoints (ascending), the rows ranking 1st will indicate the maximum number of employees at the earliest timepoint (the first date that reached maximum).
 
 SELECT DISTINCT * 
